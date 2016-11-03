@@ -1,13 +1,13 @@
 {
-  "name": "offliner",
+  "name": "offline-verifier",
   "version": "0.0.1",
   "description": "Detect and Handle browser connection",
   "authors": [
-    "Roy Surjano <carlosz1203@gmail.com>"
+    "Roy Surjano <rsurjano@outlook.com> (https://codex-media.com)"
   ],
   "repository": {
     "type": "git",
-    "url": "git://github.com/codex-media/offliner.git"
+    "url": "git://github.com/codex-media/offline-verifier.git"
   },
   "main": "js/index.js",
   "license": "MIT",
