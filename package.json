@@ -1,0 +1,23 @@
+{
+  "name": "offliner",
+  "private": true,
+  "version": "0.0.1",
+  "description": "Detect and Handle browser connection",
+  "authors": [
+    "Roy Surjano <carlosz1203@gmail.com>"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/codex-media/offliner.git"
+  },
+  "main": "js/index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "codelyzer": "~0.0.26"
+  },
+  "scripts": {},
+  "dependencies": {
+    "systemjs": "^0.19.40",
+    "typescript": "^2.0.6"
+  }
+}
