@@ -21,7 +21,6 @@
     "watch": "tsc -w -p ./src"
   },
   "dependencies": {
-    "codelyzer": "~0.0.26",
     "es6-module-loader": "^0.17.11",
     "systemjs": "^0.19.40"
   },
