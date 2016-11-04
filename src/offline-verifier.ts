@@ -2,9 +2,9 @@
 /**
  * used as template options
  * 
- * @interface OfflinerOptions
+ * @interface OfflineVerifierOptions
  */
-interface OfflinerOptions {
+interface OfflineVerifierOptions {
   onOnline?: any;
   onOffline?: any;
 }
@@ -13,30 +13,30 @@ interface OfflinerOptions {
  * Main class for expose
  * 
  * @export
- * @class Offliner
+ * @class OfflineVerifier
  */
-export class Offliner {
+export class OfflineVerifier {
 
   /**
    * status connection
    * 
    * @type {boolean}
-   * @memberOf Offliner
+   * @memberOf OfflineVerifier
    */
   status: boolean = true
 
   /**
-   * Creates an instance of Offliner.
+   * Creates an instance of OfflineVerifier.
    * 
-   * @param {any} [options=<OfflinerOptions>{
+   * @param {any} [options=<OfflineVerifierOptions>{
    *       onOnline: function () { },
    *       onOffline: function () { }
    *     }]
    * 
-   * @memberOf Offliner
+   * @memberOf OfflineVerifier
    */
   constructor(
-    public options = <OfflinerOptions>{
+    public options = <OfflineVerifierOptions>{
       onOnline: function () { },
       onOffline: function () { }
     }
@@ -50,7 +50,7 @@ export class Offliner {
    * 
    * @private
    * 
-   * @memberOf Offliner
+   * @memberOf OfflineVerifier
    */
   private updateOnlineStatus = () => {
     this.status = true;
@@ -63,7 +63,7 @@ export class Offliner {
    * 
    * @private
    * 
-   * @memberOf Offliner
+   * @memberOf OfflineVerifier
    */
   private updateOfflineStatus = () => {
     this.status = false;
