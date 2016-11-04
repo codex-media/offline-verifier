@@ -25,13 +25,11 @@
     "es6-module-loader": "^0.17.11",
     "systemjs": "^0.19.40"
   },
-  "devdependencies": {
+  "typings": "offline-verifier.d.ts",
+  "devDependencies": {
+    "webpack": "^1.13.3",
     "istanbul": "^0.4.3",
     "mocha": "^2.2.1",
     "standard": "^7.1.2"
-  },
-  "typings": "offline-verifier.d.ts",
-  "devDependencies": {
-    "webpack": "^1.13.3"
   }
 }
