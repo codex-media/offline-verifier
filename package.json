@@ -11,12 +11,27 @@
   },
   "main": "js/index.js",
   "license": "MIT",
-  "devDependencies": {
-    "codelyzer": "~0.0.26"
+  "scripts": {
+    "postinstall": "npm build",
+    "lint": "standard",
+    "test": "npm run lint && npm run test-code-coverage",
+    "test-code-coverage": "istanbul cover node_modules/mocha/bin/_mocha -- -R spec --bail",
+    "test-std": "mocha -- -R spec --bail",
+    "build": "tsc -p ./src",
+    "watch": "tsc -w -p ./src"
   },
-  "scripts": {},
   "dependencies": {
-    "systemjs": "^0.19.40",
-    "typescript": "^2.0.6"
+    "codelyzer": "~0.0.26",
+    "es6-module-loader": "^0.17.11",
+    "systemjs": "^0.19.40"
+  },
+  "devdependencies": {
+    "istanbul": "^0.4.3",
+    "mocha": "^2.2.1",
+    "standard": "^7.1.2"
+  },
+  "typings": "offline-verifier.d.ts",
+  "devDependencies": {
+    "webpack": "^1.13.3"
   }
 }
