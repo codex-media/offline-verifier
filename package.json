@@ -1,6 +1,6 @@
 {
   "name": "offline-verifier",
-  "version": "0.0.2",
+  "version": "0.0.4",
   "description": "Detect and Handle browser connection",
   "authors": [
     "Roy Surjano <rsurjano@outlook.com> (https://codex-media.com)"
