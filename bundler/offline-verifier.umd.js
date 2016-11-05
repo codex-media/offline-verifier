@@ -3,9 +3,16 @@
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
+__export(require('./src'));
+
+},{"./src":2}],2:[function(require,module,exports){
+"use strict";
+function __export(m) {
+    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
+}
 __export(require('./offline-verifier'));
 
-},{"./offline-verifier":2}],2:[function(require,module,exports){
+},{"./offline-verifier":3}],3:[function(require,module,exports){
 "use strict";
 /**
  * Main class for expose
