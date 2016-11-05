@@ -13,18 +13,19 @@
   "license": "MIT",
   "scripts": {
     "postinstall": "npm build",
-    "test": "npm run lint && npm run test-code-coverage",
+    "mocha": "mocha",
+    "test": "npm run mocha",
     "test-code-coverage": "istanbul cover node_modules/mocha/bin/_mocha -- -R spec --bail",
     "test-std": "mocha -- -R spec --bail",
     "build": "tsc -p . && npm run umd",
     "umd": "browserify index.js --standalone OfflineVerifier > bundler/offline-verifier.umd.js",
-
     "umdwatch": "watchify index.js --standalone OfflineVerifier -o bundler/offline-verifier.umd.js -v",
     "watch": "tsc -w -p . | npm run umdwatch"
   },
-  "dependencies": { },
+  "dependencies": {},
   "typings": "index.d.ts",
   "devDependencies": {
+    "chai": "^3.5.0",
     "istanbul": "^0.4.3",
     "mocha": "^2.2.1",
     "watchify": "^3.7.0"
