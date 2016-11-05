@@ -20,7 +20,6 @@
     "rewriteTsconfig": false
   },
   "files": [
-    "index.ts",
     "src/index.ts",
     "src/offline-verifier.ts"
   ]
