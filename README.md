@@ -1,23 +1,57 @@
-#Offline Verifier 
-[![CircleCI](https://circleci.com/gh/codex-media/offline-verifier/tree/master.svg?style=shield)](https://circleci.com/gh/codex-media/offline-verifier/tree/master)
+# Offline Verifier 
+[![CircleCI](https://circleci.com/gh/codex-media/offline-verifier/tree/master.svg?style=shield)](https://circleci.com/gh/codex-media/offline-verifier/tree/master) [![Join the chat at https://gitter.im/js-stack-from-scratch/Lobby](https://badges.gitter.im/offline-verifier/Lobby.svg)](https://gitter.im/offline-verifier/Lobby)
 
-Detect and Handle browser connection
+## Detect and Handle browser connection
 
-### TODO:
+## Features
 
-- [ ] Mercury
-- [ ] add minified file
-- [ ] add differente namespaces
-- [ ] finish unit test
+- Handle online and offline events from browser
+
+## For a live demo and short intro, please visit [offline-verifier.github.io](http://offline-verifier.github.io).
+
+## Installing
+
+Using npm:
+
+```bash
+$ npm install offline-verifier
+```
+
+Using bower:
+
+```bash
+$ bower install offline-verifier
+```
+
+Using cdn:
+
+```html
+<script src="https://unpkg.com/offline-verifier/bundler/offline-verifier.umd.js"></script>
+```
+
+## Examples
+
+Take a look at the [`examples`](https://github.com/codex-media/offline-verifier/tree/master/examples) folder.
+
+## documentation
+
+[`documentation`](https://github.com/codex-media/offline-verifier/tree/master/docs)
 
 ## Feedback
 There are a lot of features I would like to see in this useful module. You can help to make project better contributing your code or just sending your feedback. If you miss some functionality you are welcome to write me on rsurjano@outlook.com
 
 List of issues/features can be found here (https://github.com/codex-media/offline-verifier/issues). However I personally plan to implement much more useful functions
 
-### Release History
+## Release History
 
 See the [CHANGELOG](CHANGELOG.md).
+
+### TODO:
+
+- [ ] add minified file
+- [ ] add differente namespaces
+- [ ] finish unit test
+- [ ] distinguis between browser and nodejs based server
 
 ## Licence
 

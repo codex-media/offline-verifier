@@ -5,20 +5,26 @@
   "authors": [
     "Roy Surjano <rsurjano@outlook.com> (https://codex-media.com)"
   ],
+  "homepage": "",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/codex-media/offline-verifier.git"
   },
-  "main": "src/index.js",
+  "main": "index.js",
   "license": "MIT",
+  "keywords": [
+    "offline-verifier"
+  ],
+  "bugs": {
+    "url": "https://github.com/codex-media/offline-verifier/issues"
+  },
   "scripts": {
     "postinstall": "npm build",
     "test-code-coverage": "istanbul cover ./node_modules/mocha/bin/_mocha --no-colors -- test/ -R spec",
     "test": "npm run test-code-coverage && npm run lint",
-    "build": "tsc -p . && npm run umd && npm run-script markdown",
-    "umd": "browserify src/index.js --standalone OfflineVerifier > bundler/offline-verifier.umd.js",
-    "lint": "tslint src/**/*.ts -e \"**/*.d.ts\" -t verbose -o code-quality.html --force",
-    "authors": "git shortlog -se | perl -spe 's/^s+d+s+//' | sed -e '/^CommitSyncScript.*$/d' > AUTHORS.md",
+    "build": "tsc -p . && npm run umd",
+    "umd": "browserify index.js --standalone OfflineVerifier > bundler/offline-verifier.umd.js",
+    "lint": "tslint **/*.ts -e \"**/*.d.ts\" -t verbose -o code-quality.html --force",
     "changelog": "git log  --pretty=format:'- (%ad) %s ( <mailto:%ae> in [#%h](https://github.com/codex-media/offline-verifier/commit/%H)) %n' > CHANGELOG.md"
   },
   "publishConfig": {
