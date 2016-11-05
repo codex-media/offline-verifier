@@ -19,7 +19,7 @@
     "umd": "browserify src/index.js --standalone OfflineVerifier > bundler/offline-verifier.umd.js",
     "lint": "tslint src/**/*.ts -e \"**/*.d.ts\" -t verbose -o code-quality.html --force",
     "authors": "git shortlog -se | perl -spe 's/^s+d+s+//' | sed -e '/^CommitSyncScript.*$/d' > AUTHORS.md",
-    "changelog": "git log  --pretty=format:'- (%ad) %s ( <mailto:%ae> in [#%h](https://github.com/codex-media/offline-verifier/commits/%H)) %n' > CHANGELOG.md"
+    "changelog": "git log  --pretty=format:'- (%ad) %s ( <mailto:%ae> in [#%h](https://github.com/codex-media/offline-verifier/commit/%H)) %n' > CHANGELOG.md"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
