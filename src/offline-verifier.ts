@@ -2,41 +2,46 @@
 /**
  * used as template options
  * 
- * @interface OfflineVerifierOptions
+ * @interface VerifierOptions
  */
-interface OfflineVerifierOptions {
+interface VerifierOptions {
   onOnline?: any;
   onOffline?: any;
 }
+
+interface Window {
+  addEventListener: any;
+}
+declare var window: Window;
 
 /**
  * Main class for expose
  * 
  * @export
- * @class OfflineVerifier
+ * @class Verifier
  */
-export class OfflineVerifier {
+export class Verifier {
 
   /**
    * status connection
    * 
    * @type {boolean}
-   * @memberOf OfflineVerifier
+   * @memberOf Verifier
    */
-  status: boolean = true
+  status: boolean = true;
 
   /**
-   * Creates an instance of OfflineVerifier.
+   * Creates an instance of Verifier.
    * 
-   * @param {any} [options=<OfflineVerifierOptions>{
+   * @param {any} [options=<VerifierOptions>{
    *       onOnline: function () { },
    *       onOffline: function () { }
    *     }]
    * 
-   * @memberOf OfflineVerifier
+   * @memberOf Verifier
    */
   constructor(
-    public options = <OfflineVerifierOptions>{
+    public options = <VerifierOptions>{
       onOnline: function () { },
       onOffline: function () { }
     }
@@ -50,12 +55,12 @@ export class OfflineVerifier {
    * 
    * @private
    * 
-   * @memberOf OfflineVerifier
+   * @memberOf Verifier
    */
   private updateOnlineStatus = () => {
     this.status = true;
     this.options.onOnline();
-    return this.status
+    return this.status;
   }
 
   /**
@@ -68,7 +73,12 @@ export class OfflineVerifier {
   private updateOfflineStatus = () => {
     this.status = false;
     this.options.onOffline();
-    return this.status
+    this.getStatus();
+    return this.status;
+  }
+
+  private getStatus(): boolean {
+    return this.status;
   }
 
 }

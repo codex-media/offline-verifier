@@ -3,18 +3,18 @@
  * Main class for expose
  *
  * @export
- * @class OfflineVerifier
+ * @class Verifier
  */
-class OfflineVerifier {
+class Verifier {
     /**
-     * Creates an instance of OfflineVerifier.
+     * Creates an instance of Verifier.
      *
-     * @param {any} [options=<OfflineVerifierOptions>{
+     * @param {any} [options=<VerifierOptions>{
      *       onOnline: function () { },
      *       onOffline: function () { }
      *     }]
      *
-     * @memberOf OfflineVerifier
+     * @memberOf Verifier
      */
     constructor(options = {
             onOnline: function () { },
@@ -25,7 +25,7 @@ class OfflineVerifier {
          * status connection
          *
          * @type {boolean}
-         * @memberOf OfflineVerifier
+         * @memberOf Verifier
          */
         this.status = true;
         /**
@@ -33,7 +33,7 @@ class OfflineVerifier {
          *
          * @private
          *
-         * @memberOf OfflineVerifier
+         * @memberOf Verifier
          */
         this.updateOnlineStatus = () => {
             this.status = true;
@@ -55,6 +55,9 @@ class OfflineVerifier {
         window.addEventListener('online', this.updateOnlineStatus);
         window.addEventListener('offline', this.updateOfflineStatus);
     }
+    getStatus() {
+        return this.status;
+    }
 }
-exports.OfflineVerifier = OfflineVerifier;
+exports.Verifier = Verifier;
 //# sourceMappingURL=offline-verifier.js.map
