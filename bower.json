@@ -1,0 +1,36 @@
+{
+    "name": "offline-verifier",
+    "description": "Detect and Handle browser connection",
+    "main": [
+        "src/index.js"
+    ],
+    "dependencies": { },
+    "devDependencies": {},
+    "moduleType": [
+        "amd",
+        "es6",
+        "globals",
+        "node"
+    ],
+    "keywords": [
+        "offline",
+        "verifier",
+        "browser"
+    ],
+    "authors": [
+        "Roy Surjano <rsurjano@outlook.com>"
+    ],
+    "license": "MIT",
+    "ignore": [
+        "**/.*",
+        "node_modules",
+        "bundler",
+        ".npmrc",
+        "package-dev.json",
+        "code-quality.html",
+        ".vscode",
+        "coverage",
+        "bower_components"
+    ],
+    "private": false
+}
