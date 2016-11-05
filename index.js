@@ -1,7 +1,6 @@
-/**
- * @module
- * @description
- * Entry point for all public APIs of the offline-verifier package.
- */
-export * from './src/index';
+"use strict";
+function __export(m) {
+    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
+}
+__export(require('./src'));
 //# sourceMappingURL=index.js.map
