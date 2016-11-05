@@ -19,6 +19,9 @@
     "umd": "browserify src/index.js --standalone OfflineVerifier > bundler/offline-verifier.umd.js",
     "lint": "tslint src/**/*.ts -e \"**/*.d.ts\" -t verbose -o code-quality.html --force"
   },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
   "dependencies": {},
   "typings": "index.d.ts",
   "devDependencies": {
