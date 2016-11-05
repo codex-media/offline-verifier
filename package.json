@@ -9,16 +9,17 @@
     "type": "git",
     "url": "git://github.com/codex-media/offline-verifier.git"
   },
-  "main": "js/index.js",
+  "main": "index.js",
   "license": "MIT",
   "scripts": {
     "postinstall": "npm build",
-    "lint": "standard",
     "test": "npm run lint && npm run test-code-coverage",
     "test-code-coverage": "istanbul cover node_modules/mocha/bin/_mocha -- -R spec --bail",
     "test-std": "mocha -- -R spec --bail",
-    "build": "tsc -p ./src",
-    "watch": "tsc -w -p ./src"
+    "build": "tsc -p . && npm run umd",
+    "umd": "browserify src/index.js --standalone OfflineVerifier > bundler/offline-verifier.umd.js",
+    "umdwatch": "watchify src/index.js --standalone OfflineVerifier -o bundler/offline-verifier.umd.js -v",
+    "watch": "tsc -w -p . | npm run umdwatch"
   },
   "dependencies": {
     "es6-module-loader": "^0.17.11",
@@ -26,9 +27,9 @@
   },
   "typings": "offline-verifier.d.ts",
   "devDependencies": {
-    "webpack": "^1.13.3",
     "istanbul": "^0.4.3",
     "mocha": "^2.2.1",
-    "standard": "^7.1.2"
+    "uglify-js": "^2.7.4",
+    "watchify": "^3.7.0"
   }
 }
