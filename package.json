@@ -27,8 +27,6 @@
   "devDependencies": {
     "istanbul": "^0.4.3",
     "mocha": "^2.2.1",
-    "uglify-js": "^2.7.4",
-
     "watchify": "^3.7.0"
   }
 }
