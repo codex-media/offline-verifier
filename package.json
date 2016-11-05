@@ -1,6 +1,6 @@
 {
   "name": "offline-verifier",
-  "version": "0.0.3",
+  "version": "0.0.2",
   "description": "Detect and Handle browser connection",
   "authors": [
     "Roy Surjano <rsurjano@outlook.com> (https://codex-media.com)"
@@ -25,7 +25,6 @@
   "typings": "index.d.ts",
   "devDependencies": {
     "chai": "^3.5.0",
-    "codelyzer": "^1.0.0-beta.3",
     "istanbul": "^1.1.0-alpha.1",
     "jsdom": "^9.8.3",
     "mocha": "^2.5.3",
