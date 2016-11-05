@@ -17,9 +17,7 @@
     "test": "npm run test-code-coverage && npm run lint",
     "build": "tsc -p . && npm run umd",
     "umd": "browserify src/index.js --standalone OfflineVerifier > bundler/offline-verifier.umd.js",
-    "umdwatch": "watchify src/index.js --standalone OfflineVerifier -o bundler/offline-verifier.umd.js -v",
-    "watch": "tsc -w -p . | npm run umdwatch",
-    "lint": "tslint src/**/*.ts -e \"**/*.d.ts\" -t verbose -o code-quality.txt"
+    "lint": "tslint src/**/*.ts -e \"**/*.d.ts\" -t verbose -o code-quality.html --force"
   },
   "dependencies": {},
   "typings": "index.d.ts",
@@ -29,7 +27,6 @@
     "jsdom": "^9.8.3",
     "mocha": "^2.5.3",
     "tslint": "^3.15.1",
-    "typescript": "^2.0.7",
-    "watchify": "^3.7.0"
+    "typescript": "^2.0.7"
   }
 }
