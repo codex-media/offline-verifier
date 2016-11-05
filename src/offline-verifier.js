@@ -50,6 +50,7 @@ class Verifier {
         this.updateOfflineStatus = () => {
             this.status = false;
             this.options.onOffline();
+            this.getStatus();
             return this.status;
         };
         window.addEventListener('online', this.updateOnlineStatus);
