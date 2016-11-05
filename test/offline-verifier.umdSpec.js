@@ -22,11 +22,5 @@ describe('starting', function() {
     it('should return current status', function() {
         var currentStatus = offlineVerifier.getStatus();
         expect(currentStatus).to.be.true;
-        // var word = 'hello world';
-        // expect(word).to.equal('hello world');
-        // expect(word).to.not.equal('HELLO WORLD');
-        // expect(word).to.be.a('string');
-        // expect(word).to.not.be.a('number');
-        // expect(word).to.contain('hello');
     })
 })
