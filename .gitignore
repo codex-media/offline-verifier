@@ -6,4 +6,3 @@ coverage/
 code-quality.txt
 package-dev.json
 .npmrc
-bundler/
