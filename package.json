@@ -1,13 +1,13 @@
 {
   "name": "offline-verifier",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Detect and Handle browser connection",
   "authors": [
     "Roy Surjano <rsurjano@outlook.com> (https://codex-media.com)"
   ],
   "repository": {
     "type": "git",
-    "url": "git://github.com/codex-media/offline-verifier.git"
+    "url": "git+https://github.com/codex-media/offline-verifier.git"
   },
   "main": "index.js",
   "license": "MIT",
@@ -17,19 +17,18 @@
     "test-code-coverage": "istanbul cover node_modules/mocha/bin/_mocha -- -R spec --bail",
     "test-std": "mocha -- -R spec --bail",
     "build": "tsc -p . && npm run umd",
-    "umd": "browserify src/index.js --standalone OfflineVerifier > bundler/offline-verifier.umd.js",
-    "umdwatch": "watchify src/index.js --standalone OfflineVerifier -o bundler/offline-verifier.umd.js -v",
+    "umd": "browserify index.js --standalone OfflineVerifier > bundler/offline-verifier.umd.js",
+
+    "umdwatch": "watchify index.js --standalone OfflineVerifier -o bundler/offline-verifier.umd.js -v",
     "watch": "tsc -w -p . | npm run umdwatch"
   },
-  "dependencies": {
-    "es6-module-loader": "^0.17.11",
-    "systemjs": "^0.19.40"
-  },
-  "typings": "offline-verifier.d.ts",
+  "dependencies": { },
+  "typings": "index.d.ts",
   "devDependencies": {
     "istanbul": "^0.4.3",
     "mocha": "^2.2.1",
     "uglify-js": "^2.7.4",
+
     "watchify": "^3.7.0"
   }
 }
