@@ -8,8 +8,7 @@
     "allowSyntheticDefaultImports": true,
     "sourceMap": true,
     "noEmitHelpers": true,
-    "strictNullChecks": false,
-    "outDir": "../js/"
+    "strictNullChecks": false
   },
   "awesomeTypescriptLoaderOptions": {
     "forkChecker": true,
@@ -19,5 +18,9 @@
   "buildOnSave": false,
   "atom": {
     "rewriteTsconfig": false
-  }
+  },
+  "files": [
+    "src/index.ts",
+    "src/offline-verifier.ts"
+  ]
 }
