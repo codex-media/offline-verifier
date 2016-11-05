@@ -13,23 +13,23 @@
   "license": "MIT",
   "scripts": {
     "postinstall": "npm build",
-    "mocha": "mocha",
-    "test": "npm run mocha && npm run test-code-coverage",
-    "test-code-coverage": "istanbul cover node_modules/mocha/bin/_mocha -- -R spec --bail",
-    "test-std": "mocha -- -R spec --bail",
+    "test-code-coverage": "istanbul cover ./node_modules/mocha/bin/_mocha --no-colors -- test/ -R spec",
+    "test": "npm run test-code-coverage && npm run lint",
     "build": "tsc -p . && npm run umd",
     "umd": "browserify src/index.js --standalone OfflineVerifier > bundler/offline-verifier.umd.js",
     "umdwatch": "watchify src/index.js --standalone OfflineVerifier -o bundler/offline-verifier.umd.js -v",
-    "watch": "tsc -w -p . | npm run umdwatch"
+    "watch": "tsc -w -p . | npm run umdwatch",
+    "lint": "tslint src/**/*.ts -e \"**/*.d.ts\" -t verbose -o code-quality.txt"
   },
   "dependencies": {},
   "typings": "index.d.ts",
   "devDependencies": {
     "chai": "^3.5.0",
-    "istanbul": "1.1.0-alpha.1",
+    "codelyzer": "^1.0.0-beta.3",
+    "istanbul": "^1.1.0-alpha.1",
     "jsdom": "^9.8.3",
     "mocha": "^2.5.3",
-    "ts-node": "^1.6.1",
+    "tslint": "^3.15.1",
     "typescript": "^2.0.7",
     "watchify": "^3.7.0"
   }
