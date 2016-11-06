@@ -29,6 +29,47 @@ Using cdn:
 <script src="https://unpkg.com/offline-verifier/bundler/offline-verifier.umd.js"></script>
 ```
 
+## How to use
+
+This module is written using [ES2015 modules](http://www.2ality.com/2014/09/es6-modules-final.html).
+
+```js
+import { Verifier } from "offline-verifier";
+```
+
+Or import everything into a namespace (`OfflineVerifier`):
+
+```js
+import * as OfflineVerifier from "offline-verifier";
+var Verifier = OfflineVerifier.verifier;
+```
+
+In Node:
+
+```js
+var Verifier = require("offline-verifier").Verifier;
+```
+
+Also you can use the `OfflineVerifier` global object, just load `bundler/offline-verifier.umd.js` file into your html file
+```js
+var Verifier = window.OfflineVerifier.Verifier;
+```
+
+To any case, after import/load the module, use it as follow:
+```js
+    // instance Offline Verifier 
+var verifier = new Verifier({
+    // add a listener function executed when internet connection is online
+    onOnline: function(){
+        // magic goes here
+        alert('internet connection has been restablished');
+    },
+    // add a listener function executed when lost your internet connection
+    onOffline: function(){
+        alert('you has lost your current internet connection);
+    }
+}) 
+```
 ## Examples
 
 Take a look at the [`examples`](https://github.com/codex-media/offline-verifier/tree/master/examples) folder.
