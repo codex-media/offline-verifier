@@ -44,18 +44,14 @@ import * as OfflineVerifier from "offline-verifier";
 var Verifier = OfflineVerifier.verifier;
 ```
 
-In Node:
-
-```js
-var Verifier = require("offline-verifier").Verifier;
-```
-
 Also you can use the `OfflineVerifier` global object, just load `bundler/offline-verifier.umd.js` file into your html file
+
 ```js
 var Verifier = window.OfflineVerifier.Verifier;
 ```
 
 To any case, after import/load the module, use it as follow:
+
 ```js
 // instance Offline Verifier 
 new Verifier({
