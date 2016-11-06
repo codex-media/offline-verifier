@@ -7,7 +7,7 @@
 
 - Handle online and offline events from browser
 
-## For a live demo and short intro, please visit [offline-verifier.github.io](http://offline-verifier.github.io).
+## For a live demo and short intro, please visit [offline-verifier.github.io](https://codex-media.github.io/offline-verifier/).
 
 ## Installing
 
@@ -72,7 +72,7 @@ Take a look at the [`examples`](https://github.com/codex-media/offline-verifier/
 
 ## documentation
 
-[`documentation`](https://github.com/codex-media/offline-verifier/tree/master/docs)
+[`documentation`](https://codex-media.github.io/offline-verifier/docs)
 
 ## Feedback
 There are a lot of features I would like to see in this useful module. You can help to make project better contributing your code or just sending your feedback. If you miss some functionality you are welcome to rise a issue
