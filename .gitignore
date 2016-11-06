@@ -8,3 +8,4 @@ package-dev.json
 .npmrc
 /index.js
 /index.js.map
+.npmrc
