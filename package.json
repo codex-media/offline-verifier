@@ -25,6 +25,7 @@
     "build": "tsc -p . && npm run umd",
     "umd": "browserify index.js --standalone OfflineVerifier > bundler/offline-verifier.umd.js",
     "lint": "tslint **/*.ts -e \"**/*.d.ts\" -t verbose -o code-quality.html --force",
+    "doc": "typedoc --out docs src",
     "changelog": "git log  --pretty=format:'- (%ad) %s ( <mailto:%ae> in [#%h](https://github.com/codex-media/offline-verifier/commit/%H)) %n' > CHANGELOG.md"
   },
   "publishConfig": {
@@ -38,6 +39,7 @@
     "jsdom": "^9.8.3",
     "mocha": "^2.5.3",
     "tslint": "^3.15.1",
+    "typedoc": "^0.5.1",
     "typescript": "^2.0.7"
   }
 }
