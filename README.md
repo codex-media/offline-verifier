@@ -57,8 +57,8 @@ var Verifier = window.OfflineVerifier.Verifier;
 
 To any case, after import/load the module, use it as follow:
 ```js
-    // instance Offline Verifier 
-var verifier = new Verifier({
+// instance Offline Verifier 
+new Verifier({
     // add a listener function executed when internet connection is online
     onOnline: function(){
         // magic goes here
@@ -66,7 +66,7 @@ var verifier = new Verifier({
     },
     // add a listener function executed when lost your internet connection
     onOffline: function(){
-        alert('you has lost your current internet connection);
+        alert('you has lost your current internet connection');
     }
 }) 
 ```
