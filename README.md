@@ -79,7 +79,7 @@ Take a look at the [`examples`](https://github.com/codex-media/offline-verifier/
 [`documentation`](https://github.com/codex-media/offline-verifier/tree/master/docs)
 
 ## Feedback
-There are a lot of features I would like to see in this useful module. You can help to make project better contributing your code or just sending your feedback. If you miss some functionality you are welcome to write me on rsurjano@outlook.com
+There are a lot of features I would like to see in this useful module. You can help to make project better contributing your code or just sending your feedback. If you miss some functionality you are welcome to rise a issue
 
 List of issues/features can be found here (https://github.com/codex-media/offline-verifier/issues). However I personally plan to implement much more useful functions
 
