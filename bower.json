@@ -2,7 +2,7 @@
     "name": "offline-verifier",
     "description": "Detect and Handle browser connection",
     "main": [
-        "src/index.js"
+        "index.js"
     ],
     "dependencies": { },
     "devDependencies": {},
